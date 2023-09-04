@@ -1,4 +1,4 @@
-﻿using Domain;
+﻿using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Auth.Data
