@@ -5,10 +5,14 @@ C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Auth.deps.json
 C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Auth.runtimeconfig.json
 C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Auth.dll
 C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Auth.pdb
+C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Microsoft.OpenApi.dll
 C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Domain.dll
+C:\Proyectos\AuthJWT\Auth\Auth\bin\Debug\net7.0\Domain.pdb
 C:\Proyectos\AuthJWT\Auth\Auth\obj\Debug\net7.0\Auth.csproj.AssemblyReference.cache
 C:\Proyectos\AuthJWT\Auth\Auth\obj\Debug\net7.0\Auth.GeneratedMSBuildEditorConfig.editorconfig
 C:\Proyectos\AuthJWT\Auth\Auth\obj\Debug\net7.0\Auth.AssemblyInfoInputs.cache

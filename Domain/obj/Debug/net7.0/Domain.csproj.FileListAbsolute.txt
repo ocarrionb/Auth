@@ -1,0 +1,11 @@
+C:\Proyectos\AuthJWT\Auth\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Proyectos\AuthJWT\Auth\Domain\bin\Debug\net7.0\Domain.dll
+C:\Proyectos\AuthJWT\Auth\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Proyectos\AuthJWT\Auth\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\AuthJWT\Auth\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Proyectos\AuthJWT\Auth\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Proyectos\AuthJWT\Auth\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Proyectos\AuthJWT\Auth\Domain\obj\Debug\net7.0\Domain.dll
+C:\Proyectos\AuthJWT\Auth\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Proyectos\AuthJWT\Auth\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Proyectos\AuthJWT\Auth\Domain\obj\Debug\net7.0\ref\Domain.dll
