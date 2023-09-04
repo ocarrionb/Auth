@@ -9,11 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth", "Auth\Auth.csproj", 
 		{CC92A7A6-6F1E-4483-8479-DFB52CAE3DF7} = {CC92A7A6-6F1E-4483-8479-DFB52CAE3DF7}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{CC92A7A6-6F1E-4483-8479-DFB52CAE3DF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{CC92A7A6-6F1E-4483-8479-DFB52CAE3DF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{706BFF59-BF21-443E-8A8A-6B4466383D04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{706BFF59-BF21-443E-8A8A-6B4466383D04}"
+	ProjectSection(ProjectDependencies) = postProject
+		{53FB0657-7A90-4227-B929-682C55EB2365} = {53FB0657-7A90-4227-B929-682C55EB2365}
+		{CC92A7A6-6F1E-4483-8479-DFB52CAE3DF7} = {CC92A7A6-6F1E-4483-8479-DFB52CAE3DF7}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{8C10D4F5-964C-464F-8441-29EB247E030A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{8C10D4F5-964C-464F-8441-29EB247E030A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
