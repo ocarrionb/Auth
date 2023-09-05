@@ -1,8 +1,10 @@
 ﻿using Auth.Data;
 using Domain.Entity;
+using Domain.Options;
 using Domain.Requests;
 using Domain.Response;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -13,11 +15,15 @@ namespace Repository
     public class UsersRepository : IUsersRepository
     {
         private readonly ApplicationDbContext _context;
-        private string SecretKey;
-        public UsersRepository(ApplicationDbContext context, IConfiguration config)
+        private readonly SecretOptions _secretOptions;
+
+        public UsersRepository(ApplicationDbContext context, 
+            //IConfiguration config,
+            IOptions<SecretOptions> secretOptions)
         {
             _context = context;
-            SecretKey = config.GetValue<string>("Setting:SecretKey");
+            _secretOptions = secretOptions.Value;
+            //SecretKey = config.GetValue<string>("Setting:SecretKey");
         }
 
         public User GetUser(int UserId)
@@ -58,7 +64,7 @@ namespace Repository
 
             var tokenHandler = new JwtSecurityTokenHandler();
 
-            var key = Encoding.ASCII.GetBytes(SecretKey);
+            var key = Encoding.ASCII.GetBytes(_secretOptions.SecretKey);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
