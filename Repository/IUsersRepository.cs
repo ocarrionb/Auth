@@ -1,6 +1,6 @@
 ﻿using Domain.Entity;
+using Domain.Options;
 using Domain.Requests;
-using Domain.Response;
 
 namespace Repository
 {
@@ -12,8 +12,8 @@ namespace Repository
 
         bool IsUniqueUser(string userName);
 
-        Task<LoginUserResponse> Login(LoginUserRequest loginUserDto);
+        Task<LoginUser> Login(LoginUserRequest loginUserDto, string SecretKey);
 
-        Task<User> Register(CreateUserRequest createUserDto);
+        Task<User> Register(User createUserDto);
     }
 }

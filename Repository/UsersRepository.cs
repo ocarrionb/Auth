@@ -1,10 +1,6 @@
-﻿using Auth.Data;
+﻿using Domain;
 using Domain.Entity;
-using Domain.Options;
 using Domain.Requests;
-using Domain.Response;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -15,15 +11,10 @@ namespace Repository
     public class UsersRepository : IUsersRepository
     {
         private readonly ApplicationDbContext _context;
-        private readonly SecretOptions _secretOptions;
 
-        public UsersRepository(ApplicationDbContext context, 
-            //IConfiguration config,
-            IOptions<SecretOptions> secretOptions)
+        public UsersRepository(ApplicationDbContext context)
         {
             _context = context;
-            _secretOptions = secretOptions.Value;
-            //SecretKey = config.GetValue<string>("Setting:SecretKey");
         }
 
         public User GetUser(int UserId)
@@ -46,15 +37,15 @@ namespace Repository
             return _context.User.OrderBy(u => u.Name).ToList();
         }
 
-        public async Task<LoginUserResponse> Login(LoginUserRequest loginUserDto)
+        public async Task<LoginUser> Login(LoginUserRequest loginUserRequest, string SecretKey)
         {
             var user = _context.User.FirstOrDefault(
-                u => u.UserName == loginUserDto.UserName &&
-                u.Password == loginUserDto.Password);
+                u => u.UserName == loginUserRequest.UserName &&
+                u.Password == loginUserRequest.Password);
 
             if (user == null)
             {
-                LoginUserResponse? userSession = new LoginUserResponse()
+                LoginUser? userSession = new LoginUser()
                 {
                     Token = "",
                     User = null
@@ -64,7 +55,7 @@ namespace Repository
 
             var tokenHandler = new JwtSecurityTokenHandler();
 
-            var key = Encoding.ASCII.GetBytes(_secretOptions.SecretKey);
+            var key = Encoding.ASCII.GetBytes(SecretKey);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -81,29 +72,22 @@ namespace Repository
             {
                 var token = tokenHandler.CreateToken(tokenDescriptor);
 
-                LoginUserResponse loginUserResponseDto = new LoginUserResponse()
+                LoginUser loginUser = new LoginUser()
                 {
                     Token = tokenHandler.WriteToken(token),
                     User = user
                 };
-                return loginUserResponseDto;
+                return loginUser;
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine($"Error into Repository - Login: {ex}");
                 throw;
             }
         }
 
-        public async Task<User> Register(CreateUserRequest createUserDto)
+        public async Task<User> Register(User user)
         {
-            User user = new User()
-            {
-                Name = createUserDto.Name,
-                UserName = createUserDto.UserName,
-                Password = createUserDto.Password,
-                Role = createUserDto.Role
-            };
             _context.User.Add(user);
             await _context.SaveChangesAsync();
             return user;

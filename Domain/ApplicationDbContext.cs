@@ -1,7 +1,7 @@
 ﻿using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Auth.Data
+namespace Domain
 {
     public class ApplicationDbContext : DbContext
     {

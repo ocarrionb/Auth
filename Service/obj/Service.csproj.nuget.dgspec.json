@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Proyectos\\AuthJWT\\Auth\\Service\\Service.csproj": {}
+    "C:\\Proyectos\\Auth\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Proyectos\\AuthJWT\\Auth\\Service\\Service.csproj": {
+    "C:\\Proyectos\\Auth\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\AuthJWT\\Auth\\Service\\Service.csproj",
-        "projectName": "Service",
-        "projectPath": "C:\\Proyectos\\AuthJWT\\Auth\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Proyectos\\Auth\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Proyectos\\Auth\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\octca\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\AuthJWT\\Auth\\Service\\obj\\",
+        "outputPath": "C:\\Proyectos\\Auth\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\octca\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,157 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Proyectos\\Auth\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Proyectos\\Auth\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Proyectos\\Auth\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\octca\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\Auth\\Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\octca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Proyectos\\Auth\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Proyectos\\Auth\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.32.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Proyectos\\Auth\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Proyectos\\Auth\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Proyectos\\Auth\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\octca\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\Auth\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\octca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Proyectos\\Auth\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Proyectos\\Auth\\Domain\\Domain.csproj"
+              },
+              "C:\\Proyectos\\Auth\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Proyectos\\Auth\\Repository\\Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "XAct.Core.PCL": {
+              "target": "Package",
+              "version": "[0.0.5014, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
